@@ -2,6 +2,7 @@ eval "$(pkgx +neovim.io +direnv +lazygit +fzf +gh)"
 eval "$(pkgx +node +github.com/antfu/ni)"
 eval "$(pkgx starship init zsh)"
 eval "$(direnv hook zsh)"
+eval "$(dev --shellcode)"  # https://github.com/pkgxdev/dev
 
 
 ## case insensitive path-completion
