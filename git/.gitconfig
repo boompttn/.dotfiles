@@ -7,3 +7,8 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/Users/boom/.pkgx/cli.github.com/v2.73.0/bin/gh auth git-credential
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
