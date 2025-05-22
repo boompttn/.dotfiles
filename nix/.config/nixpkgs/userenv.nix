@@ -14,7 +14,6 @@ in pkgs.buildEnv {
     vimPlugins.vim-plug
     antigen
     starship
-    nodejs-slim
     tmux
     ripgrep
     fd

@@ -1,10 +1,11 @@
-eval "$(starship init zsh)"
+eval "$(pkgx +neovim.io +direnv +lazygit +fzf +stow)"
+eval "$(pkgx +node +github.com/antfu/ni)"
+eval "$(pkgx starship init zsh)"
 eval "$(direnv hook zsh)"
 
 
-autoload -Uz +X compinit && compinit
-
 ## case insensitive path-completion
+autoload -Uz +X compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
 
