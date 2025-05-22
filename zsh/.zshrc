@@ -1,4 +1,4 @@
-eval "$(pkgx +neovim.io +direnv +lazygit +fzf +stow)"
+eval "$(pkgx +neovim.io +direnv +lazygit +fzf +stow +gh)"
 eval "$(pkgx +node +github.com/antfu/ni)"
 eval "$(pkgx starship init zsh)"
 eval "$(direnv hook zsh)"
