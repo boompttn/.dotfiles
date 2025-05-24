@@ -14,7 +14,11 @@ zstyle ':completion:*' menu select
 export EDITOR=nvim
 alias vimdiff='nvim -d'
 
-source ~/.nix-profile/share/antigen/antigen.zsh
+
+
+
+# antigen -- temporary until pkgx package the libary
+source ~/.dotfiles/antigen/antigen.zsh
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
