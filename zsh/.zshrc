@@ -1,9 +1,21 @@
+if ! command -v pkgx >/dev/null 2>&1; then
+  echo "Command '$1' not found and 'pkgx' is not installed."
+  read "reply?Do you want to install pkgx? [y/N] "
+  if [[ "$reply" =~ ^[Yy]$ ]]; then
+    echo "Installing pkgx..."
+    curl -fsS https://pkgx.sh | sh
+    echo "Please restart your terminal or run 'exec zsh' to reload the environment."
+  else
+    echo "pkgx installation skipped."
+  fi
+  return 127
+fi
+
 eval "$(pkgx +neovim.io +direnv +lazygit +fzf +gh)"
 eval "$(pkgx +node +github.com/antfu/ni)"
 eval "$(pkgx starship init zsh)"
 eval "$(direnv hook zsh)"
-eval "$(dev --shellcode)"  # https://github.com/pkgxdev/dev
-
+eval "$(dev --shellcode)" # https://github.com/pkgxdev/dev
 
 ## case insensitive path-completion
 autoload -Uz +X compinit && compinit
@@ -13,9 +25,6 @@ zstyle ':completion:*' menu select
 # vim
 export EDITOR=nvim
 alias vimdiff='nvim -d'
-
-
-
 
 # antigen -- temporary until pkgx package the libary
 source ~/.dotfiles/antigen/antigen.zsh
