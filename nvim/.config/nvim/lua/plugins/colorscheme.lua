@@ -1,31 +1,23 @@
 return {
+  -- add gruvbox
+  { "projekt0n/github-nvim-theme", name = "github-theme" }, -- Configure LazyVim to load gruvbox
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
+    "f-person/auto-dark-mode.nvim",
     opts = {
-      background = {
-        light = "latte",
-        dark = "macchiato",
-      },
+      set_dark_mode = function()
+        vim.cmd("colorscheme github_dark_default")
+      end,
+      set_light_mode = function()
+        vim.cmd("colorscheme github_light_default")
+      end,
+      update_interval = 3000,
+      fallback = "dark",
     },
   },
-  -- NOTE: Enable this if can fix alacritty terminal switching system theme
-  -- {
-  --   "f-person/auto-dark-mode.nvim",
-  --   config = {
-  --     set_dark_mode = function()
-  --       vim.api.nvim_set_option("background", "dark")
-  --     end,
-  --     set_light_mode = function()
-  --       vim.api.nvim_set_option("background", "light")
-  --     end,
-  --   },
-  -- },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "github_dark_default",
     },
   },
 }
