@@ -11,9 +11,12 @@ if ! command -v pkgx >/dev/null 2>&1; then
   return 127
 fi
 
+
+set -a
 eval "$(pkgx +neovim.io +direnv +lazygit +fzf +gh)"
 eval "$(pkgx +node +github.com/antfu/ni)"
 eval "$(pkgx starship init zsh)"
+set +a
 eval "$(direnv hook zsh)"
 eval "$(dev --shellcode)" # https://github.com/pkgxdev/dev
 
