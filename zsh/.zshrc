@@ -15,6 +15,7 @@ fi
 set -a
 eval "$(pkgx +neovim.io +direnv +lazygit +fzf +gh)"
 eval "$(pkgx +node +github.com/antfu/ni)"
+export PATH="$(npm config get prefix)/bin:$PATH"
 eval "$(pkgx starship init zsh)"
 set +a
 eval "$(direnv hook zsh)"
