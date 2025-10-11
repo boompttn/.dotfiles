@@ -1,2 +1,3 @@
 font-family = "JetBrainsMono Nerd Font Mono"
-theme = light:Github-Light-Default,dark:Github-Dark-Default
+theme = light:Github Light Default,dark:Github Dark Default
+keybind = shift+enter=text:\n
