@@ -1,6 +1,6 @@
 [user]
 	name = Patthanat Thanintantrakun
-	email = 37561295+boompikachu@users.noreply.github.com
+	email = 37561295+boompttn@users.noreply.github.com
 [credential "https://github.com"]
 	helper = !gh auth git-credential
 [credential "https://gist.github.com"]
@@ -10,3 +10,5 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+[init]
+	defaultBranch = main

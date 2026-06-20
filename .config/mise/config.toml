@@ -1,0 +1,23 @@
+[settings]
+dotfiles.root = "~/.dotfiles"
+experimental = true
+
+[tools]
+gh = "latest"
+lazygit = "latest"
+neovim = "latest"
+ni = "latest"
+node = "latest"
+starship = "latest"
+
+[dotfiles]
+"~/.gitconfig" = {}
+"~/.zshrc" = {}
+"~/.config/ghostty/config" = {}
+"~/.config/nvim" = {}
+"~/.config/mise/config.toml" = {}
+"~/.zprofile" = {}
+
+[tasks.update-antigen]
+description = "Download antigen zsh plugin manager"
+run = "curl -L git.io/antigen > ~/.dotfiles/antigen/antigen.zsh"
