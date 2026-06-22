@@ -1,0 +1,5 @@
+packages:
+  - type: github_release
+    repo_owner: dummy
+    repo_name: dummy
+    asset: dummy

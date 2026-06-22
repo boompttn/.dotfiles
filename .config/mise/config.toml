@@ -2,6 +2,9 @@
 dotfiles.root = "~/.dotfiles"
 experimental = true
 
+[env]
+MISE_AQUA_REGISTRIES = "file://{{env.HOME}}/.dotfiles/.config/mise/aqua-registry.yaml"
+
 [tools]
 gh = "latest"
 lazygit = "latest"
