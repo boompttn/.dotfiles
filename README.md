@@ -10,22 +10,20 @@ Clone this repo into your home directory and apply all dotfiles:
 
 ```sh
 git clone <repo-url> ~/.dotfiles
-cd ~/.dotfiles 
+cd ~/.dotfiles/src
 mise trust
 mise dotfiles apply
 ```
 
 ## Structure
 
-Files mirror their `$HOME` paths directly from the repo root:
+Files mirror their `$HOME` paths from the `src/` directory (`dotfiles.root = "~/.dotfiles/src"`):
 
 | Repo path | Home path |
 |-----------|-----------|
-| `.gitconfig` | `~/.gitconfig` |
-| `.zshrc` | `~/.zshrc` |
-| `.config/mise/config.toml` | `~/.config/mise/config.toml` |
-
-The `antigen/` directory is vendored directly and sourced from its repo path — it is not a managed dotfile.
+| `src/.gitconfig` | `~/.gitconfig` |
+| `src/.zshrc` | `~/.zshrc` |
+| `src/.config/mise/config.toml` | `~/.config/mise/config.toml` |
 
 ## Adding a new dotfile
 
@@ -33,7 +31,7 @@ The `antigen/` directory is vendored directly and sourced from its repo path —
 mise dotfiles add ~/.config/foo/config
 ```
 
-This moves the file into `~/.dotfiles/.config/foo/config`, registers it in the `[dotfiles]` section of `~/.config/mise/config.toml`, and symlinks it back.
+This moves the file into `~/.dotfiles/src/.config/foo/config`, registers it in the `[dotfiles]` section of `~/.config/mise/config.toml`, and symlinks it back.
 
 ## Checking status
 

@@ -1,9 +1,9 @@
 [settings]
-dotfiles.root = "~/.dotfiles"
+dotfiles.root = "~/.dotfiles/src"
 experimental = true
 
 [env]
-MISE_AQUA_REGISTRIES = "file://{{env.HOME}}/.dotfiles/.config/mise/aqua-registry.yaml"
+MISE_AQUA_REGISTRIES = "file://{{env.HOME}}/.dotfiles/src/.config/mise/aqua-registry.yaml"
 
 [tools]
 gh = "latest"
