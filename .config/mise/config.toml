@@ -15,6 +15,7 @@ starship = "latest"
 
 [dotfiles]
 "~/.gitconfig" = {}
+"~/.gitignore_global" = {}
 "~/.zshrc" = {}
 "~/.config/ghostty/config" = {}
 "~/.config/nvim" = {}

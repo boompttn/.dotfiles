@@ -12,3 +12,5 @@
 	process = git-lfs filter-process
 [init]
 	defaultBranch = main
+[core]
+	excludesfile = "~/.gitignore_global"
