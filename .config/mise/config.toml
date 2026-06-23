@@ -7,6 +7,7 @@ MISE_AQUA_REGISTRIES = "file://{{env.HOME}}/.dotfiles/.config/mise/aqua-registry
 
 [tools]
 gh = "latest"
+"github:zsh-users/antigen" = "latest"
 lazygit = "latest"
 neovim = "latest"
 ni = "latest"
@@ -21,7 +22,3 @@ starship = "latest"
 "~/.config/nvim" = {}
 "~/.config/mise/config.toml" = {}
 "~/.zprofile" = {}
-
-[tasks.update-antigen]
-description = "Download antigen zsh plugin manager"
-run = "curl -L git.io/antigen > ~/.dotfiles/antigen/antigen.zsh"
