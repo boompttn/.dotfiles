@@ -10,7 +10,7 @@ Clone this repo into your home directory and apply all dotfiles:
 
 ```sh
 git clone <repo-url> ~/.dotfiles
-cd ~/.dotfiles/src
+cd ~/.dotfiles
 mise trust
 mise dotfiles apply
 ```
