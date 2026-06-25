@@ -6,6 +6,7 @@ experimental = true
 MISE_AQUA_REGISTRIES = "file://{{env.HOME}}/.dotfiles/src/.config/mise/aqua-registry.yaml"
 
 [tools]
+fzf = "latest"
 gh = "latest"
 "github:zsh-users/antigen" = "latest"
 lazygit = "latest"
